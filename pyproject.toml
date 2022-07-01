@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "tg-bot-yt-dlp"
+version = "0.1.0"
+description = ""
+authors = ["Nikolai Markov <frog158@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+python-telegram-bot = {version = "20.0a0", allow-prereleases = true}
+yt-dlp = "^2022.5.18"
+requests = "^2.28.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = {version = "^22.3.0", allow-prereleases = true}
+
+[tool.poetry.scripts]
+start-bot = "tg_bot_yt_dlp.scripts.start_bot:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
